@@ -13,4 +13,4 @@ class Topping(models.Model):
     name = models.TextField()
 
     def __str__(self):
-        return f"Toppings: {self.name}"
+        return f"{self.pizza}: {self.name}"
