@@ -10,7 +10,7 @@ class Pizza(models.Model):
 class Topping(models.Model):
     """Toppings for a pizza."""
     pizza = models.ForeignKey(Pizza, on_delete=models.CASCADE)
-    name = models.TextField()
+    name = models.CharField(max_length=200)
 
     def __str__(self):
-        return f"{self.pizza}: {self.name}"
+        return self.name.title()
